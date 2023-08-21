@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 
 
 async function getCharacters() {
@@ -10,8 +9,8 @@ async function getCharacters() {
 
 
 export default async function CharacterList() {
-
-    const characters = await getCharacters()
+   const characters = await getCharacters()
+    
     return (
       <div>
             {characters.length > 0 ? (
