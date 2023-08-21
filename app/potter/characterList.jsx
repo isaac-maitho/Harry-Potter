@@ -8,23 +8,25 @@ async function getCharacters() {
     return res.json()
 }
 
+
 export default async function CharacterList() {
+
     const characters = await getCharacters()
     return (
-      <>
-      <Link href='/potter/details'>
-          {characters.map((character)=>(
-              <div key={character.id} className='card my-5'>
-                <h3>{character.name}</h3>
-                <h3>{character.yearOfBirth}</h3>
-              </div>
-          ))}
-          {characters.length === 0 &&(
-              <p className="text-center">No characters to display</p>
-          )}
-      </Link>
-     
-      </>
+      <div>
+            {characters.length > 0 ? (
+                characters.map(character => (
+                    <div key={character.id} className='card my-5'>
+                        <Link href={`/potter/${character.id}`}>
+                                <h3>Name: {character.name}</h3>
+                                <h3>Date of Birth: {character.dateOfBirth}</h3>
+                        </Link>
+                    </div>
+                ))
+            ) : (
+                <p className="text-center">No characters to display</p>
+            )}
+        </div>
     )
   }
   
