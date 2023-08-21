@@ -20,6 +20,7 @@ export default async function DetailsPage({ params }) {
             <h2 className="text-center">{character.name}</h2>
                 <h3>Other Names: {character.alternate_names}</h3>
                 <h3>Gender: {character.gender}</h3>
+                <h3>House: {character.house}</h3>
                 <h3>Species: {character.species}</h3>
                 <h3>Ancestry: {character.ancestry}</h3>
                 <h3>Hair-Colour: {character.hairColour}</h3>
