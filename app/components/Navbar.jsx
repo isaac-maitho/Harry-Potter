@@ -3,11 +3,9 @@ import { FaBolt } from 'react-icons/fa';
 import Link from 'next/link';
 
 
-interface NavbarProps {
-  title?: string;
-}
 
-const Navbar: React.FC<NavbarProps> = ({ title = 'Harry-Potter' }) => {
+
+const Navbar = ({ title = 'Harry-Potter' }) => {
   return (
     <nav className='navbar mb-12 shadow-lg bg-neutral text-neutral-content'>
       <div className="container mx-auto">
@@ -19,9 +17,6 @@ const Navbar: React.FC<NavbarProps> = ({ title = 'Harry-Potter' }) => {
         </div>
         <div className="flex-1 px-2 mx-2">
             <div className="flex justify-end">
-                <Link href='/' className='btn btn-ghost btn-sm rounded-btn'>
-                    Home
-                </Link>
                 <Link href='/about' className='btn btn-ghost btn-sm rounded-btn'>
                     About
                 </Link>
