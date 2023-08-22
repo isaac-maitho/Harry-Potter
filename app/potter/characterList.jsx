@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SearchCharacters from '../components/SearchCharacters'
 
 
 async function getCharacters() {
@@ -13,6 +14,7 @@ export default async function CharacterList() {
     
     return (
       <div>
+      <SearchCharacters />
             {characters.length > 0 ? (
                 characters.map(character => (
                     <div key={character.id} className='card my-5'>

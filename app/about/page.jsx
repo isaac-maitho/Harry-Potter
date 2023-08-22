@@ -4,7 +4,7 @@ function AboutPage() {
   return (
     <div>
          <h1>About Harry Potter</h1>
-         <div className='font-bold text-auto mx-50'>
+         <div className='font-bold text-auto mx-50 text-center my-50 card'>
             <p>
                 Welcome to the enchanting world of Harry Potter! Created by British author J.K. Rowling,
                 the Harry Potter series has captivated readers of all ages with its magical adventures,
